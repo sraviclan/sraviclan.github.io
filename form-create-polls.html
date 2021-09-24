@@ -1,0 +1,306 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clan Club</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<!-- SITE HEADER-->
+<header class="site-header navbar navbar-expand-md">
+  <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="images/ClanClublogo.png" alt="Clan Logo"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse d-none d-md-flex" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="my-clubs.html">Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Livestreams</a></li>
+      </ul>
+    </div>
+    <div class="ml-auto site-header__right d-flex">
+      <div class="search-box">
+        <button class="btn-search"><i class="bi bi-search"></i></button>
+        <input class="input-search" type="search" placeholder="Search"/>
+      </div>
+      <div class="dropdown d-none d-md-flex"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-circle" src="images/profile.png" alt="profile"/></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+          <li><a class="dropdown-item" href="my-club.html">My Club</a></li>
+          <li><a class="dropdown-item" href="#">My Livestreams</a></li>
+          <li><a class="dropdown-item" href="#">My Subscriptions</a></li>
+        </ul>
+      </div><a class="d-inline-flex d-md-none align-self-center mobile-toggle" data-bs-toggle="offcanvas" href="#mobileMenu" role="button" aria-controls="mobileMenu"><i class="bi bi-list"></i></a>
+    </div>
+  </div>
+</header>
+<!-- /SITE HEADER-->
+<div class="main-content-sec">
+  <div class="sidebar"><a class="sidebar-toggle" href=""><i class="bi bi-list"></i></a><a class="sidebar-logo" href=""><img src="images/ClanClublogo.svg"/></a>
+    <ul class="main-menu">
+      <li><a class="active" href="my-club.html"><i class="icon-my-club"></i><span class="menu-text">My Club</span></a></li>
+      <li><a href="my-club-posts.html"><i class="icon-all-post"></i><span class="menu-text">All Posts</span></a></li>
+      <li><a href="create-a-post.html"><i class="icon-post"></i><span class="menu-text">Create a post</span></a></li>
+      <li><a href="subscribers.html"><i class="icon-subscribers"></i><span class="menu-text">Subscribers</span></a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="container container-custom">
+      <div class="form-create-post">
+        <div class="d-flex flex-wrap align-items-start">
+          <div class="dropdown create-post"><span class="title-w-bdr dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><span>Polls</span></span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="form-create-audio.html">Audio Post</a></li>
+              <li><a class="dropdown-item" href="form-create-static.html">Static Post</a></li>
+              <li><a class="dropdown-item" href="form-create-text.html">Text</a></li>
+              <li><a class="dropdown-item" href="form-create-video.html">Video</a></li>
+            </ul>
+          </div><a class="ms-auto btn btn-primary ms-2" href="">Publish</a>
+        </div>
+        <div class="row post-form-sec">
+          <div class="col-md-9 post-form">
+                        <div class="form-floating mb-3">
+                          <input class="form-control" type="Title of the Post" placeholder="title" id="title" name="title"/>
+                          <label for="title">Title</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <textarea class="form-control" type="textarea" placeholder="Add a description" id="description" name="description"></textarea>
+                          <label for="description">Description</label>
+                        </div>
+            <div class="custom-checkbox no-bdr">
+              <input id="makeItAvailable" type="checkbox"/>
+            </div>
+            <div class="radio-w-input">
+              <div class="radio">
+                <div class="custom-radio no-bdr">
+                  <input id="enterChoice" type="radio"/>
+                  <label for="enterChoice"> </label>
+                </div>
+              </div>
+              <div class="input"> 
+                <input class="form-control" type="text" placeholder="Enter an answer here" name="enterAnAnswer"/>
+              </div>
+            </div>
+            <div class="radio-w-input">
+              <div class="radio">
+                <div class="custom-radio no-bdr">
+                  <input id="enterChoice1" type="radio"/>
+                  <label for="enterChoice1"> </label>
+                </div>
+              </div>
+              <div class="input"> 
+                <input class="form-control" type="text" placeholder="Enter an answer here" name="enterAnAnswer"/>
+              </div>
+            </div><a class="link link-primary ms-4 mb-2" href="">Add an option</a>
+            <hr class="mt-5"/>
+            <div class="row mb-3 set-end-date-sec">
+              <div class="col-12">
+                <div class="custom-checkbox no-bdr">
+                  <input id="setEndDate" type="checkbox"/>
+                  <label for="setEndDate"> <span class="d-inline-flex flex-column">Set end date</span></label>
+                </div>
+              </div>
+              <div class="set-end-date-row row">
+                <div class="col-auto">
+                  <div class="input-group date" id="datepicker">
+                    <input class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon input-height"><span class="input-group-text input-height"><i class="bi bi-calendar-date"></i></span></span>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="input-group date" id="timepicker">
+                    <input class="form-control" placeholder="HH:MM"/><span class="input-group-append input-group-addon input-height"><span class="input-group-text input-height"><i class="bi bi-calendar-event"></i></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-checkbox no-bdr">
+              <input id="allowMultiple" type="checkbox"/>
+              <label for="allowMultiple"> <span class="d-inline-flex flex-column">Allow multiple choice </span></label>
+            </div>
+            <div class="d-flex flex-wrap justify-content-end mt-5"><a class="btn btn-outline-orange" href="">Discard</a><a class="btn btn-outline-primary ms-2" href="">Save</a></div>
+          </div>
+          <div class="col-md-3 post-form-detail">
+            <h6 class="d-inline-flex">Viewership<i class="bi bi-info-circle ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></i></h6>
+            <div class="custom-checkbox no-bdr">
+              <input id="publicFree" type="checkbox"/>
+              <label for="publicFree"> <span class="d-inline-flex flex-column">Public - Free
+                  <div class="form-text fs-xsml mt-0" id="publicFree">Anyone can view</div></span></label>
+            </div>
+            <div class="custom-checkbox no-bdr">
+              <input id="selectClubPkg" type="checkbox"/>
+              <label for="selectClubPkg"> <span class="d-inline-flex flex-column">Select Club Package
+                  <div class="form-text fs-xsml mt-0" id="publicFree">Anyone can view</div></span></label>
+            </div>
+            <div class="plans-checkbox">
+              <div class="custom-checkbox no-bdr">
+                <input id="basicPlan" type="checkbox"/>
+                <label for="basicPlan"> 
+                  <div class="bundle-info"> 
+                    <div class="bundle-name">Basic</div><a class="bundle-detail" href="">Details</a>
+                  </div>
+                  <div class="bundle-desc fs-xsml mt-0"> 
+                    <div class="bundle-info-price">299 INR / Month | </div>
+                    <div class="bundle-info-fans">12 Fans</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="plans-checkbox">
+              <div class="custom-checkbox no-bdr">
+                <input id="premiumPlan" type="checkbox"/>
+                <label for="premiumPlan"> 
+                  <div class="bundle-info"> 
+                    <div class="bundle-name">Premium</div><a class="bundle-detail" href="">Details</a>
+                  </div>
+                  <div class="bundle-desc fs-xsml mt-0"> 
+                    <div class="bundle-info-price">399 INR / Month | </div>
+                    <div class="bundle-info-fans">15 Fans</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="plans-checkbox">
+              <div class="custom-checkbox no-bdr">
+                <input id="goldPlan" type="checkbox"/>
+                <label for="goldPlan"> 
+                  <div class="bundle-info"> 
+                    <div class="bundle-name">Gold</div><a class="bundle-detail" href="">Details</a>
+                  </div>
+                  <div class="bundle-desc fs-xsml mt-0"> 
+                    <div class="bundle-info-price">499 INR / Month | </div>
+                    <div class="bundle-info-fans">20 Fans </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOBILE MENU-->
+<div class="offcanvas offcanvas-start" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel"><a class="navbar-brand" href="#"><img src="images/ClanClublogo.png" alt="Clan Logo"/></a></h5>
+    <button class="btn-close text-reset align-self-start mt-1" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-my-club"></i><span class="menu-text">My Club</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-all-post"></i><span class="menu-text">All Posts</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-post"></i><span class="menu-text">Create a post</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-subscribers"></i><span class="menu-text">Subscribers</span></a></li>
+    </ul>
+  </div>
+  <div class="offcanvas-footer">
+    <ul>
+      <li><a href="#">Profile Settings</a></li>
+      <li><a href="my-club.html">My Club</a></li>
+      <li><a href="#">My Livestreams</a></li>
+      <li><a href="#">My Subscriptions</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /MOBILE MENU-->
+<div class="offcanvas offcanvas-start" id="offCanvasFilter" tabindex="-1" aria-labelledby="offCanvasFilterLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offCanvasFilterLabel">Filter by:</h5>
+    <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    <div class="d-flex align-items-start">
+      <div class="nav flex-column nav-pills me-3" id="filter-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="postTypeTab-tab" data-bs-toggle="pill" data-bs-target="#postTypeTab" type="button" role="tab" aria-controls="postTypeTab" aria-selected="true">Post type</button>
+        <button class="nav-link" id="bundleTypeTab-tab" data-bs-toggle="pill" data-bs-target="#bundleTypeTab" type="button" role="tab" aria-controls="bundleTypeTab" aria-selected="false">Bundle</button>
+      </div>
+      <div class="tab-content filter-tab-content" id="">
+        <div class="tab-pane fade show active" id="postTypeTab" role="tabpanel" aria-labelledby="postTypeTab-tab">
+          <div class="radio-style">
+            <form action="">
+              <div class="custom-checkbox">
+                <input id="Livestreams" type="checkbox"/>
+                <label for="Livestreams">Livestreams</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="VideoPosts" type="checkbox"/>
+                <label for="VideoPosts">Video Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="StaticPosts" type="checkbox"/>
+                <label for="StaticPosts">Static Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="AudioPosts" type="checkbox"/>
+                <label for="AudioPosts">Audio Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="TextPosts" type="checkbox"/>
+                <label for="TextPosts">Text Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="polls" type="checkbox"/>
+                <label for="polls">Polls</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="bundleTypeTab" role="tabpanel" aria-labelledby="bundleTypeTab-tab">
+          <div class="radio-style">
+            <form action="">
+              <div class="custom-checkbox">
+                <input id="bundleType1" type="checkbox"/>
+                <label for="bundleType1">Bundle Type 1</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="bundleType2" type="checkbox"/>
+                <label for="bundleType2">Bundle Type 2</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="bundleType3" type="checkbox"/>
+                <label for="bundleType3">Bundle Type 3</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-bottom">
+    <div class="btn-group"><a class="btn btn-lg btn-outline-orange me-auto" href="">Cancel</a><a class="btn btn-lg btn-outline-primary" href="">Apply</a></div>
+  </div>
+</div>
+<!-- JS-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/anime.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Package Table-->
+<script>
+  $(function () {
+    $('#table').bootstrapTable({})
+  
+      $("#datepicker").datetimepicker({
+    useCurrent: false,
+    format: "L",
+    showTodayButton: true,
+    icons: {
+      next: "bi bi-chevron-right",
+      previous: "bi bi-chevron-left",
+      today: 'todayText',
+    }
+  });
+    $("#timepicker").datetimepicker({
+    format: "LT",
+    icons: {
+      up: "bi bi-chevron-up",
+      down: "bi bi-chevron-down"
+    }
+  });
+  
+  });
+</script>

@@ -1,0 +1,499 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clan Club</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<!-- SITE HEADER-->
+<header class="site-header navbar navbar-expand-md">
+  <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="images/ClanClublogo.png" alt="Clan Logo"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse d-none d-md-flex" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="my-clubs.html">Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Livestreams</a></li>
+      </ul>
+    </div>
+    <div class="ml-auto site-header__right d-flex">
+      <div class="search-box">
+        <button class="btn-search"><i class="bi bi-search"></i></button>
+        <input class="input-search" type="search" placeholder="Search"/>
+      </div>
+      <div class="dropdown d-none d-md-flex"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-circle" src="images/profile.png" alt="profile"/></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+          <li><a class="dropdown-item" href="my-club.html">My Club</a></li>
+          <li><a class="dropdown-item" href="#">My Livestreams</a></li>
+          <li><a class="dropdown-item" href="#">My Subscriptions</a></li>
+        </ul>
+      </div><a class="d-inline-flex d-md-none align-self-center mobile-toggle" data-bs-toggle="offcanvas" href="#mobileMenu" role="button" aria-controls="mobileMenu"><i class="bi bi-list"></i></a>
+    </div>
+  </div>
+</header>
+<!-- /SITE HEADER-->
+<div class="main-content-sec">
+  <div class="sidebar"><a class="sidebar-toggle" href=""><i class="bi bi-list"></i></a><a class="sidebar-logo" href=""><img src="images/ClanClublogo.svg"/></a>
+    <ul class="main-menu">
+      <li><a class="active" href="my-club.html"><i class="icon-my-club"></i><span class="menu-text">My Club</span></a></li>
+      <li><a href="my-club-posts.html"><i class="icon-all-post"></i><span class="menu-text">All Posts</span></a></li>
+      <li><a href="create-a-post.html"><i class="icon-post"></i><span class="menu-text">Create a post</span></a></li>
+      <li><a href="subscribers.html"><i class="icon-subscribers"></i><span class="menu-text">Subscribers</span></a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="container container-custom">
+      <div class="main-content__top">
+        <div class="custom-tab">
+          <ul class="nav nav-pills">
+            <li class="nav-item" role="presentation"><a class="nav-link active" id="details-tab" href="#details" data-bs-toggle="pill" role="tab" aria-controls="details-tab" aria-selected="true">Details</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" id="packages-tab" href="#packages" data-bs-toggle="pill" data-bs-target="#packages" role="tab" aria-controls="packages" aria-selected="false">Packages</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" id="payments-tab" href="#payments" data-bs-toggle="pill" data-bs-target="#payments" role="tab" aria-controls="payments" aria-selected="false">Payments</a></li>
+          </ul>
+        </div>
+        <div class="main-content__top__right"><a class="btn btn-link me-2" href="">PREVIEW</a><a class="btn btn-primary" href="">Launch</a></div>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+          <form>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="floatingInput" type="email" placeholder="Title of the Club page"/>
+              <label for="floatingInput">Title</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="creations" type="text" placeholder="List your creations separted by comma"/>
+              <label for="creations">Creations</label>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <label class="form-label" for="formFileSm">Intro video(optional)</label>
+                <div class="upload-sec upload-video custom">
+                  <div class="button_video_outer">
+                    <div class="btn_video_upload btn">
+                      <input class="upload_video_file" id="upload_video_file" type="file" name="" accepts="video/*"/><i class="bi bi-cloud-arrow-up"></i><strong>Upload Video </strong><span>(drag and drop or browse)</span>
+                    </div>
+                    <div class="processing_video_bar"></div>
+                    <div class="success_video_box"></div>
+                  </div>
+                  <div class="error_video_msg upload_video_error_msg"></div>
+                  <div class="uploaded_video_view" id="uploaded_video_view"><span class="file_video_remove">X              </span></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="formFileSm">Cover Photo</label>
+                <!-- Upload Area-->
+                <div class="upload-sec custom">
+                  <div class="outer-btn button_outer1">
+                    <div class="btn_upload1 upload_btn btn">
+                      <input id="upload_file1" type="file" name=""/><i class="bi bi-cloud-arrow-up"></i><strong>Upload Cover Photo </strong><span>(drag and drop or browse)</span>
+                    </div>
+                    <div class="processing_bar"></div>
+                    <div class="success_box"></div>
+                  </div>
+                  <div class="error_msg1 upload_error_msg"></div>
+                  <div class="uploaded_file_view" id="uploaded_view1"><span class="file_remove1 remove_file">X</span></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="formFileSm">Profile Photo</label>
+                <div class="profile-photo-preview"><img class="mw-100" src="https://via.placeholder.com/100" alt="preview"/></div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="about" placeholder="Leave a comment here" style="height: 100px"></textarea>
+              <label for="about">About</label>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <div class="form-floating mb-3">
+                  <input class="form-control" id="addURL" type="text" placeholder="Add URL"/>
+                  <label for="addURL">Add Video URL</label>
+                </div>
+                <!-- End Upload Area-->
+              </div>
+            </div>
+            <div class="row justify-content-end mt-5">
+              <div class="col-auto">
+                <button class="btn btn-outline-primary">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Packages Tab-->
+        <div class="tab-pane fade" id="packages" role="tabpanel" aria-labelledby="packages-tab">
+          <div class="row g-4 plan-info">
+            <div class="col-md-6 col-lg-4">
+              <!-- Card-->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header__left"><strong>Basic</strong><span class="card-header__left__status">Unpublished |  0 Fans</span></div>
+                  <div class="card-header__right"><strong>199 INR</strong><span class="card-header__right__status">per month</span></div>
+                </div>
+                <div class="card-body">
+                  <p>The description added by the user (if given) will be visible here. And below the perks will be listed.</p>
+                  <ol>
+                    <li>One perk that fans will get</li>
+                    <li>Another perk that fans will get</li>
+                    <li>And so on</li>
+                  </ol><a class="edit-package-btn btn-lg btn btn-outline-primary w-100" href="#" data-package="edit-package-1">Edit Package</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Card-->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header__left"><strong>Gold</strong><span class="card-header__left__status">Unpublished |  0 Fans</span></div>
+                  <div class="card-header__right"><strong>299 INR</strong><span class="card-header__right__status">per month</span></div>
+                </div>
+                <div class="card-body">
+                  <p>The description added by the user (if given) will be visible here. And below the perks will be listed.</p>
+                  <ol>
+                    <li>One perk that fans will get</li>
+                    <li>Another perk that fans will get</li>
+                    <li>And so on</li>
+                  </ol><a class="edit-package-btn btn-lg btn btn-outline-primary w-100" href="#" data-package="edit-package-1">Edit Package</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Card-->
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header__left"><strong>Platinum</strong><span class="card-header__left__status">Unpublished |  0 Fans</span></div>
+                  <div class="card-header__right"><strong>399 INR</strong><span class="card-header__right__status">per month</span></div>
+                </div>
+                <div class="card-body">
+                  <p>The description added by the user (if given) will be visible here. And below the perks will be listed.</p>
+                  <ol>
+                    <li>One perk that fans will get</li>
+                    <li>Another perk that fans will get</li>
+                    <li>And so on</li>
+                  </ol><a class="edit-package-btn btn-lg btn btn-outline-primary w-100" href="#" data-package="edit-package-1">Edit Package</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Edit Package Content-->
+          <div class="edit-package" id="edit-package-1">
+            <form>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="packageName" type="text" placeholder="Basic"/>
+                <label for="packageName">Package Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="packagePrice" type="text" placeholder="Set your bundle's monthly price"/>
+                <label for="packagePrice">Package Price Monthly <span class="form-text">(INR)</span></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="packagePriceYearly" type="text" placeholder="Set your bundle's yearly price"/>
+                <label for="packagePriceYearly">Package Price Yearly <span class="form-text">(INR) (optional)</span></label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" id="packageDesc" placeholder="Tell something about this Bundle" style="height: 100px"></textarea>
+                <label for="packageDesc">Package Description <span class="form-text">(optional)</span></label>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <div class="form-floating">
+                    <input class="form-control" id="perks" type="text" placeholder="List the perks for fans"/>
+                    <label for="perks">Perks</label>
+                  </div><a class="link link-primary" href="#" data-bs-toggle="modal" data-bs-target="#listOfPerks">Add from a pre-defined list of Perks</a>
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-outline-primary">Add</button>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-auto d-flex flex-wrap">
+                  <button class="btn btn-outline-primary me-2">Cancel</button>
+                  <button class="btn btn-outline-primary">Save</button>
+                </div>
+                <div class="ms-auto col-auto">
+                  <button class="btn btn-primary">Publish</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Payments Tab-->
+        <div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="payments-tab">
+          <h3 class="title-w-bdr"><span>Bank Details for Payout</span></h3>
+          <div class="payment-detail-form">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="ifscCode" type="text" placeholder="Basic"/>
+                    <label for="ifscCode">IFSC Code <span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="nameOfBank" type="text" placeholder="Name of the Bank"/>
+                    <label for="nameOfBank">Name of the Bank <span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="accHolderName" type="text" placeholder="Account holder name"/>
+                    <label for="accHolderName">Account holder name<span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="accNumber" type="text" placeholder="Account Number"/>
+                    <label for="accNumber">Account Number<span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="accType" aria-label="Account Type">
+                      <option selected="">Account Type</option>
+                      <option value="1">Savings</option>
+                      <option value="2">Current</option>
+                    </select>
+                    <label for="accType">Account Type</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="micrCode" type="text" placeholder="MICR Code"/>
+                    <label for="micrCode">MICR Code<span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="bankAddress" type="text" placeholder="Address"/>
+                    <label for="bankAddress">Address<span class="form-text">*</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input class="form-control" id="bankState" type="text" placeholder="State"/>
+                        <label for="bankState">State<span class="form-text">*</span></label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input class="form-control" id="bankCountry" type="text" placeholder="Country"/>
+                        <label for="bankCountry">Country<span class="form-text">*</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-flex justify-content-end mt-3">
+                  <button class="btn btn-outline-primary" type="button">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="payment-history-sec">
+            <div class="payment-history__top">
+              <div class="payment-history__top-left">
+                <h3 class="title-w-bdr"><span>Payment history <span class="payment-history__info">in INR</span></span></h3>
+              </div>
+              <div class="payment-history__top-right"></div>
+            </div>
+            <!-- Payment History Middle Sec-->
+            <div class="payment-history__middle">
+              <div class="payment-history__middle-left">
+                <ul class="list-style-none">
+                  <li><strong>Current Balance</strong>: 54,000</li>
+                  <li><strong>Withdrawal Balance</strong>: 54,000</li>
+                </ul>
+              </div>
+              <div class="payment-history__middle-right"><span class="payment-history__info">
+                  <form>
+                    <div class="form-check">
+                      <input class="form-check-input" id="autoTransfer" type="checkbox" value=""/>
+                      <label class="form-check-label" for="autoTransfer">Auto transfer</label>
+                    </div>
+                  </form></span></div>
+            </div>
+            <!-- Payment History Bottom Sec-->
+            <div class="payment-history__bottom">
+              <table class="table table-default table-responsive" id="table">
+                <thead>
+                  <tr>
+                    <th data-width="200">Month</th>
+                    <th data-width="200" data-sortable="true">Earnings</th>
+                    <th data-width="200">Other&apos;s Subscriptions</th>
+                    <th data-width="200">Processing Fee</th>
+                    <th data-width="200">Amount transferred</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>July</td>
+                    <td>25,015</td>
+                    <td>5000</td>
+                    <td>15</td>
+                    <td>20,000</td>
+                  </tr>
+                  <tr>
+                    <td>January</td>
+                    <td>50,000</td>
+                    <td>10000</td>
+                    <td>15</td>
+                    <td>30,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LIST OF PERKS-->
+  <!-- Modal-->
+  <div class="modal fade" id="listOfPerks" tabindex="-1" aria-labelledby="listOfPerksLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="title-w-bdr"><span>List of Perks</span></h3>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <select class="form-select" aria-label="Default select example">
+            <option selected="">Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOBILE MENU-->
+<div class="offcanvas offcanvas-start" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel"><a class="navbar-brand" href="#"><img src="images/ClanClublogo.png" alt="Clan Logo"/></a></h5>
+    <button class="btn-close text-reset align-self-start mt-1" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-my-club"></i><span class="menu-text">My Club</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-all-post"></i><span class="menu-text">All Posts</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-post"></i><span class="menu-text">Create a post</span></a></li>
+      <li class="nav-item"><a class="nav-link" href=""><i class="icon-subscribers"></i><span class="menu-text">Subscribers</span></a></li>
+    </ul>
+  </div>
+  <div class="offcanvas-footer">
+    <ul>
+      <li><a href="#">Profile Settings</a></li>
+      <li><a href="my-club.html">My Club</a></li>
+      <li><a href="#">My Livestreams</a></li>
+      <li><a href="#">My Subscriptions</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /MOBILE MENU-->
+<div class="offcanvas offcanvas-start" id="offCanvasFilter" tabindex="-1" aria-labelledby="offCanvasFilterLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offCanvasFilterLabel">Filter by:</h5>
+    <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    <div class="d-flex align-items-start">
+      <div class="nav flex-column nav-pills me-3" id="filter-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="postTypeTab-tab" data-bs-toggle="pill" data-bs-target="#postTypeTab" type="button" role="tab" aria-controls="postTypeTab" aria-selected="true">Post type</button>
+        <button class="nav-link" id="bundleTypeTab-tab" data-bs-toggle="pill" data-bs-target="#bundleTypeTab" type="button" role="tab" aria-controls="bundleTypeTab" aria-selected="false">Bundle</button>
+      </div>
+      <div class="tab-content filter-tab-content" id="">
+        <div class="tab-pane fade show active" id="postTypeTab" role="tabpanel" aria-labelledby="postTypeTab-tab">
+          <div class="radio-style">
+            <form action="">
+              <div class="custom-checkbox">
+                <input id="Livestreams" type="checkbox"/>
+                <label for="Livestreams">Livestreams</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="VideoPosts" type="checkbox"/>
+                <label for="VideoPosts">Video Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="StaticPosts" type="checkbox"/>
+                <label for="StaticPosts">Static Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="AudioPosts" type="checkbox"/>
+                <label for="AudioPosts">Audio Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="TextPosts" type="checkbox"/>
+                <label for="TextPosts">Text Posts</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="polls" type="checkbox"/>
+                <label for="polls">Polls</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="bundleTypeTab" role="tabpanel" aria-labelledby="bundleTypeTab-tab">
+          <div class="radio-style">
+            <form action="">
+              <div class="custom-checkbox">
+                <input id="bundleType1" type="checkbox"/>
+                <label for="bundleType1">Bundle Type 1</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="bundleType2" type="checkbox"/>
+                <label for="bundleType2">Bundle Type 2</label>
+              </div>
+              <div class="custom-checkbox">
+                <input id="bundleType3" type="checkbox"/>
+                <label for="bundleType3">Bundle Type 3</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-bottom">
+    <div class="btn-group"><a class="btn btn-lg btn-outline-orange me-auto" href="">Cancel</a><a class="btn btn-lg btn-outline-primary" href="">Apply</a></div>
+  </div>
+</div>
+<!-- JS-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/anime.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Package Table-->
+<script>
+  $(function () {
+    $('#table').bootstrapTable({})
+  
+      $("#datepicker").datetimepicker({
+    useCurrent: false,
+    format: "L",
+    showTodayButton: true,
+    icons: {
+      next: "bi bi-chevron-right",
+      previous: "bi bi-chevron-left",
+      today: 'todayText',
+    }
+  });
+    $("#timepicker").datetimepicker({
+    format: "LT",
+    icons: {
+      up: "bi bi-chevron-up",
+      down: "bi bi-chevron-down"
+    }
+  });
+  
+  });
+</script>

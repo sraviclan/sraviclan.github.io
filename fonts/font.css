@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Billy Ohio';
+  src: url('../fonts/BillyOhio.eot');
+  src: url('../fonts/BillyOhio.eot?#iefix') format('embedded-opentype'), url('../fonts/BillyOhio.woff2') format('woff2'), url('../fonts/BillyOhio.woff') format('woff'), url('../fonts/BillyOhio.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
